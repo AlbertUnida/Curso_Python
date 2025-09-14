@@ -1,7 +1,8 @@
 '''
 # operadores de comparación
+# Autor: Alberto Aguilera
+# Descripción: Ejemplos de operadores de comparación en Python
 '''
-
 r = 10 == 10 # igualdad
 print("r", r)
 r = 10 != 10 # desigualdad
