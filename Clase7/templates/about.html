@@ -2,43 +2,29 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Acerca de</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 40px;
-            background-color: #f9f9f9;
-        }
-        .container {
-            max-width: 700px;
-            margin: auto;
-            background: #fff;
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-        }
-        h1 {
-            color: #333;
-        }
-        p {
-            color: #555;
-            line-height: 1.6;
-        }
-    </style>
+    <title>About</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
 </head>
 <body>
-    <div class="container">
-        <h1>Acerca de</h1>
+    <nav class="top-nav">
+        <a href="{{ url_for('dashboard') }}">Inicio</a>
+        <a href="{{ url_for('about') }}" class="active">About</a>
+        <a href="{{ url_for('acerca') }}">Acerca</a>
+    </nav>
+    <main class="page-container text-page">
+        <h1>Sobre el Curso</h1>
         <p>
-            Bienvenido a nuestra página de información. Este sitio fue creado como parte del Curso de Python, Clase 7.
-            Aquí aprenderás sobre desarrollo web con Python y cómo crear aplicaciones dinámicas utilizando plantillas HTML.
+            Bienvenido a la secci&oacute;n About de la Clase 7. Este proyecto acompa&ntilde;a a las primeras
+            lecciones de desarrollo web con Python y Flask.
         </p>
         <p>
-            Nuestro objetivo es ayudarte a mejorar tus habilidades de programación y a comprender los conceptos fundamentales de la creación de sitios web modernos.
+            Aqu&iacute; practicamos c&oacute;mo levantar un servidor local, definir rutas y usar plantillas
+            HTML para mostrar informaci&oacute;n din&aacute;mica.
         </p>
         <p>
-            ¡Gracias por visitarnos!
+            Explora tambi&eacute;n la p&aacute;gina <strong>Acerca</strong> para ver un ejemplo de contenido orientado
+            a una organizaci&oacute;n.
         </p>
-    </div>
+    </main>
 </body>
 </html>

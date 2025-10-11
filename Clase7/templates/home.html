@@ -4,31 +4,29 @@
     <meta charset="UTF-8">
     <title>Dashboard</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
-    <style>
-        /* Estilos mínimos si no se carga styles.css */
-        body { font-family: Arial, sans-serif; margin: 20px }
-        .container { display: flex; gap: 20px }
-        .card { background: #f5f5f5; padding: 10px; border-radius: 6px; width: 150px }
-        h1 { margin-bottom: 20px }
-    </style>
 </head>
 <body>
-    <div class="container">
-        <div>
-            <h1>Dashboard</h1>
-        </div>
-        <div class="card">
-            <h2>Usuarios</h2>
-            <p>{{ datos.usuarios }}</p>
-        </div>
-        <div class="card">
-            <h2>Ventas</h2>
-            <p>{{ datos.ventas }}</p>
-        </div>
-        <div class="card">
-            <h2>Visitas</h2>
-            <p>{{ datos.visitas }}</p>
-        </div>
-    </div>
+    <nav class="top-nav">
+        <a href="{{ url_for('dashboard') }}" class="active">Inicio</a>
+        <a href="{{ url_for('about') }}">About</a>
+        <a href="{{ url_for('acerca') }}">Acerca</a>
+    </nav>
+    <main class="page-container dashboard">
+        <h1>Dashboard</h1>
+        <section class="card-grid">
+            <article class="card">
+                <h2>Usuarios</h2>
+                <p>{{ datos.usuarios }}</p>
+            </article>
+            <article class="card">
+                <h2>Ventas</h2>
+                <p>{{ datos.ventas }}</p>
+            </article>
+            <article class="card">
+                <h2>Visitas</h2>
+                <p>{{ datos.visitas }}</p>
+            </article>
+        </section>
+    </main>
 </body>
 </html>
