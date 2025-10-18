@@ -1,0 +1,1 @@
+# Solo para aclarar que conecte a la base de datos en la carpeta de la clase 7
